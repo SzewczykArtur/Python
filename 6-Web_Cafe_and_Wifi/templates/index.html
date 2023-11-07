@@ -1,0 +1,37 @@
+{% include "header.html" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="container_2" style="padding:10px 10px; margin: 0 auto;">
+            {% for n in data %}
+                <a href="{{n[2]}}" target="_blank" style="target:_blank; text-decoration: none; color: black">
+                    <div class="row" style="padding:10px 10px">
+                        <div class="col-md-4">
+                            <img src="{{n[3]}}" alt="{{n[1]}}" width="200px" height="200px">
+                        </div>
+                        <div class="col-md-8">
+                            <br>
+                            <h5>{{n[1].upper()}}</h5>
+                            <br>
+                            {{n[4]}}
+                            <br>
+                            How many seats: {{n[9]}}
+                            <br>
+                            Coffee price: {{n[10]}}
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155797.37316874685!2d16.736861421168726!3d52.40062345816228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444d2ece10ab7%3A0xa4ea31980334bfd1!2zUG96bmHFhA!5e0!3m2!1spl!2spl!4v1698926087713!5m2!1spl!2spl" width="500px" height="1000px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}

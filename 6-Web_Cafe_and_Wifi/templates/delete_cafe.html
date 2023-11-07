@@ -1,0 +1,15 @@
+{% include "header.html" %}
+
+<h2>To delete coffeehouse from database give me its name</h2>
+{% if result == False %}
+<h2 style="color:red">In our database this coffeehouse doesn't exist</h2>
+{% elif result == True %}
+<h2 style="color:green">Successfully delete coffeehouse</h2>
+{% endif %}
+<form action="/delete_coffeehouse" method="post">
+    {{delete_form.name.label}} {{delete_form.name}}
+    <br>
+    {{delete_form.button}}
+</form>
+
+{% include "footer.html" %}
