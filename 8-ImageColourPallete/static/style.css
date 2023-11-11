@@ -1,0 +1,36 @@
+body
+{
+    background-color: white;
+}
+.container
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type=number] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 10px 0;
+}
+
+input[type=submit]{
+    width: 100%;
+    background-color: #2ecc71;
+    color: White;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 10px 0;
+}
+
+body
+{
+    background-color: #F2F7F7;
+    color: black;
+    padding: 20px;
+}
