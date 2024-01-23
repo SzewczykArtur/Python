@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-1 p-2 border">
+                <h6>Id</h6>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 p-2 border">
+                <h6>E-mail</h6>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                <h6>Password</h6>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                <h6>Account creation date</h6>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                <h6>Update</h6>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                <h6>Delete</h6>
+            </div>
+        </div>
+    </div>
+
+            <form action="/admin" method="post" enctype="multipart/form-data">
+                {% for data in datas %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-1 p-2 border">
+                            <h6>{{ datas[data]["id"] }}</h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3 p-2 border">
+                            <h6>{{ data }}</h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                            <h6>{{ datas[data]["password"][:10] }}...</h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                            <h6>{{ datas[data]["create_date"] }}</h6>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                            <button name="update" value="{{ datas[data]['id'] }}">Update</button>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-2 p-2 border">
+                            {% if data == 'admin@gmail.com' %}
+                                -----------
+                            {% else %}
+                                <button name="delete" value="{{ datas[data]['id'] }}">Delete</button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

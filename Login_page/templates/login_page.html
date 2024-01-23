@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <h1>Login</h1>
+                <div style="text-align: center; border: 1px solid grey">
+                    {% if text %}
+                    <h3 style="color:green">{{ text }}</h3>
+                    {% endif %}
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        {{ render_form(form) }}
+                    </form>
+                    <a href="{{ url_for('Register')}}">Register!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
