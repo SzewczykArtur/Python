@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from flask.views import MethodView
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, EmailField,ValidationError
+from wtforms import PasswordField, SubmitField, EmailField
 from wtforms.validators import DataRequired, Email, Length
 from flask_bootstrap import Bootstrap5
 
@@ -18,7 +18,8 @@ class MyForm(FlaskForm):
     password = PasswordField(label='Password',
                              validators=[DataRequired(),
                                  Length(min=8, max=20, message='Must be between 8 and 20 characters long')])
-    submit = SubmitField(label='Log In')
+    submit = SubmitField(label='         Log In         ',
+                         render_kw={"class": "btn-secondary btn-secondary mx-auto"})
 
 
 class RegisterForm(FlaskForm):
@@ -31,7 +32,8 @@ class RegisterForm(FlaskForm):
                                      validators=[
                                          DataRequired(),
                                          Length(min=8, max=20,message='Must be between 8 and 20 characters long')])
-    submit = SubmitField(label='Register')
+    submit = SubmitField(label='         Register         ',
+                         render_kw={"class": "btn-secondary btn-secondary mx-auto"})
 
 
 class AdminButton(FlaskForm):
@@ -194,3 +196,4 @@ app.run(debug=True)
 
 # if __name__ == ' __main__':
 #     web_main()
+

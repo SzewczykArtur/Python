@@ -1,12 +1,73 @@
 {% extends "base.html" %}
 {% from 'bootstrap5/form.html' import render_form %}
-{% block title %}Login{% endblock %}
+{% block title %}Main Page{% endblock %}
 {% block content %}
-    <h1>Hello</h1>
-    {% if email == admin %}
-    <div>
-        <h6>Admin!!!</h6>
+
+<div class="banner">
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container">
+            <a href="" class="navbar-brand fw-bold">Logout</a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-targer="#navtoggler">
+                <span class="collapse-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navtoggler">
+            <ul class="navbar-nav ms-auto">
+
+                <li>
+                    <a href="" class="nav-link text-light fw-bold">Gallery</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link text-light fw-bold">About</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link text-light fw-bold">Contact us</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link text-light fw-bold">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="text-center fs-1 fw-bold py-5">
+        Lorem Ipsum
     </div>
-    {{ text }}
-    {% endif %}
+    <div class="container-sm fw-light text-justify border border-2 border-secondary rounded-3 py-2"
+         style="text-align: justify; text-justify: inter-word;">
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sagittis velit. Curabitur tristique
+            est ut imperdiet tincidunt. Suspendisse efficitur ex massa, non accumsan elit ullamcorper quis. Aenean
+            malesuada nunc et orci mattis, eget blandit magna egestas. Morbi ultrices quam vitae ante iaculis, eget
+            condimentum mauris tincidunt. Curabitur vestibulum facilisis gravida. Fusce vitae cursus nulla. Duis
+            pharetra lectus in blandit condimentum. Nullam dictum dolor lorem, id mollis leo sollicitudin ut. Nullam
+            a mauris fringilla, sollicitudin ex id, dignissim mauris. Etiam ac sapien at nunc tincidunt egestas.
+            In et posuere risus, sit amet suscipit lacus. Nam pellentesque risus eget nibh aliquet, vel finibus nisl
+            mollis. Aenean sagittis, quam non vestibulum efficitur, lorem ante commodo ipsum, in congue est diam sit
+            amet sapien. In ultricies tincidunt urna ut consectetur.
+        </p>
+        <p>
+            Donec a sapien sapien. Praesent nibh lorem, auctor at molestie id, sodales non arcu. Mauris a dolor et dolor
+            sagittis iaculis. Donec laoreet, erat et cursus elementum, turpis metus sodales felis, quis suscipit arcu
+            tellus in nisl. Vestibulum aliquam rutrum dui sit amet rutrum. In molestie vitae metus sed imperdiet.
+            Integer sed vestibulum nibh. Vivamus id ex vel elit porta suscipit. Sed orci ante, sagittis sit amet justo
+            quis, cursus laoreet diam. Vestibulum imperdiet sed nunc ut cursus. Nulla in leo in nulla mattis viverra.
+        </p>
+        <p>
+            Morbi mattis, lectus sed tempus mollis, metus magna dictum sem, aliquet imperdiet mi mi ut leo. Sed ac
+            molestie mi. Maecenas vitae risus at magna hendrerit interdum auctor vel ligula. Donec porttitor metus
+            id urna varius, quis bibendum velit eleifend. Duis eu maximus orci, at tempus lorem. Aliquam in felis
+            viverra, tristique ipsum vel, ultricies elit. Curabitur at efficitur turpis, vel vehicula justo. Aliquam
+            id aliquet mauris. Nulla purus nulla, congue et rutrum eget, euismod quis tortor. Vestibulum id nunc justo.
+            Suspendisse eu mi urna. Proin in egestas ligula. Maecenas interdum neque in laoreet venenatis. Praesent in
+            imperdiet lacus. Vivamus hendrerit vestibulum tellus a congue.
+        </p>
+    </div>
+
+</div>
 {% endblock %}
